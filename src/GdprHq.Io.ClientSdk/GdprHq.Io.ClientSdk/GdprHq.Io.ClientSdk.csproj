@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3393D160-2B9C-4199-80EB-E78C194736C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GdprHq.Io.ClientSdk</RootNamespace>
+    <AssemblyName>GdprHq.Io.ClientSdk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rights\Access.cs" />
+    <Compile Include="Rights\DataPortability.cs" />
+    <Compile Include="Rights\Erasure.cs" />
+    <Compile Include="Rights\Interfaces\IAccess.cs" />
+    <Compile Include="Rights\Interfaces\IDataPortability.cs" />
+    <Compile Include="Rights\Interfaces\IErasure.cs" />
+    <Compile Include="Rights\Interfaces\IObject.cs" />
+    <Compile Include="Rights\Interfaces\IProfiling.cs" />
+    <Compile Include="Rights\Interfaces\IRectification.cs" />
+    <Compile Include="Rights\Interfaces\IRestrictProcessing.cs" />
+    <Compile Include="Rights\Object.cs" />
+    <Compile Include="Rights\Profiling.cs" />
+    <Compile Include="Rights\Rectification.cs" />
+    <Compile Include="Rights\RestrictProcessing.cs" />
+    <Compile Include="Shared\ApiCore.cs" />
+    <Compile Include="Shared\ApiSettings.cs" />
+    <Compile Include="Shared\Enums\ApiMethodEnum.cs" />
+    <Compile Include="Shared\Enums\NotificationTypeEnum.cs" />
+    <Compile Include="Shared\Interfaces\IApiCore.cs" />
+    <Compile Include="Shared\Interfaces\INotificationManager.cs" />
+    <Compile Include="Shared\Interfaces\INotificationTypeConverter.cs" />
+    <Compile Include="Shared\NotificationManager.cs" />
+    <Compile Include="Shared\NotificationTypeConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
